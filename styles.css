@@ -1,0 +1,23 @@
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;  
+}
+
+.image-container{
+    height: 600px;
+    width: 500px;
+    border: solid blue 2px;
+    text-align: center;
+    position: fixed;
+    top: 80px;
+    left: 100px;
+    overflow: hidden; 
+    z-index: auto;
+}
+
+.top-image {
+    height: 100%;
+    width: auto;
+}
