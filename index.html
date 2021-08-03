@@ -33,15 +33,15 @@
     <script>
       const imageContainer =
         document.getElementsByClassName("image-container")[0];
+      const topImage = document.getElementsByClassName("top-image")[0];
+      const zoomImage = document.getElementsByClassName("zoom-image")[0];
+      const imageContainerPosition = imageContainer.getBoundingClientRect();
+      const yOffset = imageContainerPosition.left;
+      const xOffset = imageContainerPosition.top;
+
       imageContainer.addEventListener("mouseenter", function (e) {
-        imageContainer.style.border = "solid red 2px";
-        const topImage = document.getElementsByClassName("top-image")[0];
-        const zoomImage = document.getElementsByClassName("zoom-image")[0];
         topImage.style.opacity = "0";
         zoomImage.style.opacity = "1";
-        let currentMousePosition = getMousePosition(e);
-        zoomImage.style.left = `-${currentMousePosition.x}px`;
-        zoomImage.style.top = `-${currentMousePosition.y}px`;
       });
 
       imageContainer.addEventListener("mousemove", function (e) {
@@ -52,15 +52,13 @@
       });
 
       imageContainer.addEventListener("mouseleave", function (e) {
-        imageContainer.style.border = "solid blue 2px";
-        const topImage = document.getElementsByClassName("top-image")[0];
-        const zoomImage = document.getElementsByClassName("zoom-image")[0];
         topImage.style.opacity = "1";
         zoomImage.style.opacity = "0";
       });
+
       function getMousePosition(e) {
-        let x = event.clientX;
-        let y = event.clientY;
+        let x = event.clientX - xOffset;
+        let y = event.clientY - yOffset;
         return { x, y };
       }
     </script>

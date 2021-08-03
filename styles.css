@@ -4,14 +4,15 @@ body {
   overflow: hidden;
 }
 
+/*Only styles necessary for zoom feature*/
 .image-container {
   height: 500px;
   width: 500px;
-  border: solid blue 2px;
-  text-align: center;
-  position: fixed;
   top: 80px;
   left: 100px;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
   overflow: hidden;
   z-index: auto;
 }
@@ -20,6 +21,8 @@ body {
   height: 100%;
   width: auto;
 }
+
+/*So the image opacity doesn't change abruptly*/
 .transition-opacity {
   transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
