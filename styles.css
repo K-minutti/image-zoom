@@ -17,6 +17,11 @@ body {
   z-index: auto;
 }
 
+.image-container > *:hover {
+  cursor: zoom-in;
+  cursor: -webkit-zoom-in;
+}
+
 .top-image {
   height: 100%;
   width: auto;
@@ -24,7 +29,7 @@ body {
 
 /*So the image opacity doesn't change abruptly*/
 .transition-opacity {
-  transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s;
 }
