@@ -41,6 +41,14 @@
         zoomImage.style.opacity = "1";
       });
 
+      imageContainer.addEventListener("mousemove", function (event) {
+        const imageContainerBoundary = event.target.getBoundingClientRect();
+        let x = event.clientX - imageContainerBoundary.left;
+        let y = event.clientY - imageContainerBoundary.top;
+        console.log("X--", x);
+        console.log("Y--", y);
+      });
+
       imageContainer.addEventListener("mouseleave", function () {
         imageContainer.style.border = "solid blue 2px";
         const topImage = document.getElementsByClassName("top-image")[0];
