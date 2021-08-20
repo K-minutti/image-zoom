@@ -4,7 +4,7 @@ body {
   overflow: hidden;
 }
 
-/*Only styles necessary for zoom feature*/
+/*Only styles necessary for zoom feature - fixed*/
 .image-container {
   height: 500px;
   width: 500px;
@@ -12,7 +12,7 @@ body {
   left: 100px;
   padding: 20px;
   text-align: center;
-  position: fixed;
+  position: relative; 
   overflow: hidden;
   z-index: auto;
 }
